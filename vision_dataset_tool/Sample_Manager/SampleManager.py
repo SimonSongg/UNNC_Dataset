@@ -31,6 +31,7 @@ if matRGB8 is None:
 else:
     cv2.putText(matRGB8, str(index), (30, 50), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2)
     cv2.imshow("RGB8", matRGB8)
+
 if matZ16 is None:
     nullImg = np.zeros((720, 1280, 3), np.uint8)
     cv2.putText(nullImg, str(index), (30, 50), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2)
