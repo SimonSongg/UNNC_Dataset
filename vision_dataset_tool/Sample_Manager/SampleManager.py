@@ -25,12 +25,15 @@ matRGB8 = cv2.imread(targetDir + r"\rgb8" + "\\" + str(index) + ".png")
 matZ16 = cv2.imread(targetDir + r"\z16" + "\\" + str(index) + ".png")
 
 if matRGB8 is None:
+    nullImg = np.zeros((720, 1280, 3), np.uint8)
+    cv2.putText(nullImg, str(index), (30, 50), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2)
     cv2.imshow("RGB8", nullImg)
 else:
     cv2.putText(matRGB8, str(index), (30, 50), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2)
     cv2.imshow("RGB8", matRGB8)
-
 if matZ16 is None:
+    nullImg = np.zeros((720, 1280, 3), np.uint8)
+    cv2.putText(nullImg, str(index), (30, 50), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2)
     cv2.imshow("Z16", nullImg)
 else:
     cv2.putText(matZ16, str(index), (30, 50), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2)
