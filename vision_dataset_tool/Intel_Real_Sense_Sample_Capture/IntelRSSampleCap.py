@@ -35,14 +35,12 @@ config.enable_stream(rs.stream.color, 1280, 720, rs.format.bgr8, 30)
 
 for filename in os.listdir('D:\\catkin_ws\\vision_dataset_tool\\z16'):
     currentIndex = int(os.path.splitext(filename)[0])
-    if currentIndex > index:
-        index = currentIndex
+    if currentIndex >= index:
+        index = currentIndex + 1
 for filename in os.listdir('D:\\catkin_ws\\vision_dataset_tool\\rgb8'):
     currentIndex = int(os.path.splitext(filename)[0])
-    if currentIndex > index:
-        index = currentIndex
-
-index += 1
+    if currentIndex >= index:
+        index = currentIndex + 1
 
 # Start streaming
 pipeline.start(config)
