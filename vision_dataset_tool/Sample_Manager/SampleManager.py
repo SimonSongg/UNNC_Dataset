@@ -50,6 +50,7 @@ while True:
             os.remove(targetDir + r"\rgb8" + "\\" + str(index) + ".png")
         if os.path.exists(targetDir + r"\z16" + "\\" + str(index) + ".png"):
             os.remove(targetDir + r"\z16" + "\\" + str(index) + ".png")
+        index = index + 1
     elif key == 107:    # k
         break
 
